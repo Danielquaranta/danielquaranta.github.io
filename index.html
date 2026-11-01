@@ -33,6 +33,7 @@
   .hero .role{font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 40px}
   .hero figure{margin:0}
   .hero img{width:100%;height:auto;display:block;aspect-ratio:5/4;object-fit:cover}
+  .bio{margin-top:40px;scroll-margin-top:80px}
   .hero p.lead{font:400 21px/1.55 var(--serif);max-width:680px;margin:40px 0 0}
 
   section{padding:64px 0;border-top:1px solid var(--line)}
@@ -56,8 +57,16 @@
   .catalog .t{font:400 19px/1.35 var(--serif)}
   .catalog .f{color:var(--muted)}
   .catalog .d{grid-column:2;font-size:14px;color:var(--muted)}
+  .catalog .listen{grid-column:2;justify-self:start;margin-top:6px;font-size:13px;text-decoration:none;border:1px solid var(--line);padding:3px 10px;border-radius:999px}
+  .catalog .listen:hover{border-color:var(--accent)}
 
   .refs{list-style:none;padding:0;margin:0}
+  .books{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  .books figure{margin:0}
+  .books img{width:100%;aspect-ratio:2/3;object-fit:cover;display:block;box-shadow:0 6px 18px rgba(0,0,0,.12)}
+  .books figcaption{font-size:14px;line-height:1.5;margin-top:12px}
+  .books .bnote{display:block;margin-top:8px;color:var(--muted)}
+  @media (max-width:760px){.books{grid-template-columns:1fr 1fr;gap:16px}}
   .refs li{padding:14px 0;border-top:1px solid var(--line);font-size:16px}
   .refs li:first-child{border-top:0;padding-top:0}
   .refs .kind{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
@@ -109,12 +118,12 @@
   <div class="wrap">
     <a class="brand" href="#">Daniel Quaranta</a>
     <nav>
+      <a href="#sobre">Sobre</a>
       <a href="#obras">Obras</a>
       <a href="#escritos">Escritos</a>
       <a href="#entrevistas">Entrevistas</a>
       <a href="#pesquisa">Pesquisa</a>
       <a href="#galeria">Galeria</a>
-      <a href="#sobre">Sobre</a>
       <a href="#contato">Contato</a>
     </nav>
   </div>
@@ -126,73 +135,38 @@
     <h1>Daniel Quaranta</h1>
     <p class="role">Professor UNIRIO · Pesquisador · Compositor</p>
     <figure><img src="img/hero.jpg" alt="Daniel Quaranta" width="2000" height="1600"></figure>
-    <p class="lead">Música contemporânea, eletroacústica e instrumental. Obras apresentadas na América Latina, na Europa, na América do Norte e na Ásia.</p>
+    <div id="sobre" class="bio">
+      <div class="two">
+      <div>
+        <p>Daniel Quaranta é compositor e atua no campo da música contemporânea, tanto eletroacústica quanto instrumental. Nasceu em Buenos Aires e vive no Brasil desde 1995. É bacharel em Composição e doutor em Música pela UNIRIO, e mestre em Música pela UFRJ.</p>
+        <p>Recebeu o Prêmio Reina Sofía (Espanha) em 2004 e 2009 e foi contemplado pelo programa Ibermúsicas em 2017 e 2019. Em 2015, recebeu uma encomenda em comemoração aos 450 anos do Rio de Janeiro. Suas obras foram publicadas por editoras da Alemanha, do Brasil e do México.</p>
+        <p>Realizou residências artísticas no CMMAS, México (2012, 2014, 2015), nos Dias de Música Eletroacústica, Portugal, no ICST da Zurich University of the Arts (2018) e nos Estúdios Métamorphoses d’Orphée, Bélgica (2019).</p>
+      </div>
+      <div>
+        <p>É professor titular do Departamento de Composição e Regência da UNIRIO, onde foi coordenador do Programa de Pós-Graduação em Música e diretor interino do Instituto Villa-Lobos. Fez pós-doutorado no Centro Mexicano para la Música y las Artes Sonoras (2014–2015) e foi professor visitante na UNAM (2023).</p>
+        <p>Desde 2022 integra o programa “Cientista do Nosso Estado”, da Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro (FAPERJ), e desde 2026 integra o programa de Produtividade em Pesquisa do CNPq.</p>
+        <p class="links">
+          <a href="https://lattes.cnpq.br/4362742581917920">Currículo Lattes ↗</a>
+          <a href="https://orcid.org/0000-0003-0187-2911">ORCID ↗</a>
+        </p>
+      </div>
+    </div>
+    </div>
   </div>
 
   <!-- ===================== OBRAS ===================== -->
   <section id="obras">
     <h2>Obras</h2>
-
-    <h3 class="sub" style="margin-top:0">Para ouvir</h3>
-
-    <article class="work">
-      <div class="meta"><span class="year">2021</span>Eletroacústica</div>
-      <div>
-        <h4>Galicia — Essay on Bells</h4>
-        <p>Composta a partir de gravações feitas em campanários de cidades galegas: paisagens sonoras e sinos percutidos diretamente. Estreia mundial no FIME, Teatro Cervantes, Buenos Aires (2024); apresentada também no Visiones Sonoras, Morelia (2024).</p>
-        <iframe title="Galicia — Essay on Bells" style="height:241px" loading="lazy" src="https://bandcamp.com/EmbeddedPlayer/album=3586805901/size=large/bgcol=ffffff/linkcol=8a3b2e/artwork=small/transparent=true/"></iframe>
-        <div class="links"><a href="https://danielquaranta.bandcamp.com/album/galicia-daniel-quaranta">Ouvir no Bandcamp ↗</a></div>
-      </div>
-    </article>
-
-    <article class="work">
-      <div class="meta"><span class="year">2017</span>Voz e eletrônica · 8 canais</div>
-      <div>
-        <h4>Depois do Desejo</h4>
-        <p>Interpretação: Doriana Mendes. Formato original em oito canais. Apresentada na temporada da Fundación Telefónica, Lima (2017).</p>
-        <iframe title="Depois do Desejo" style="height:120px" loading="lazy" src="https://bandcamp.com/EmbeddedPlayer/track=3191089527/size=large/bgcol=ffffff/linkcol=8a3b2e/tracklist=false/artwork=small/transparent=true/"></iframe>
-        <div class="links"><a href="https://danielquaranta.bandcamp.com/track/depois-do-desejo">Ouvir no Bandcamp ↗</a></div>
-      </div>
-    </article>
-
-    <article class="work">
-      <div class="meta"><span class="year">2020</span>Flauta e eletroacústica</div>
-      <div>
-        <h4>Frenética</h4>
-        <p>Gravada por Patricia García no álbum <em>Nan Yar</em> (2025). Apresentada no FIME, Buenos Aires (2023).</p>
-        <div class="links"><a href="https://open.spotify.com/album/0qq5M2BF8wS81zVoG4XLjB">Ouvir no Spotify ↗</a></div>
-      </div>
-    </article>
-
-    <article class="work">
-      <div class="meta"><span class="year">2025</span>Eletroacústica</div>
-      <div>
-        <h4>Sudestada</h4>
-        <p>Incluída na coletânea da Sociedade Brasileira de Música Eletroacústica (SBME), vol. 1.</p>
-        <div class="links"><a href="https://sbme2.bandcamp.com/album/nova-colet-nea-sbme-vol-01">Ouvir no Bandcamp ↗</a></div>
-      </div>
-    </article>
-
-    <article class="work">
-      <div class="meta"><span class="year">Arquivo</span>Diversas obras</div>
-      <div>
-        <h4>Mais gravações no SoundCloud</h4>
-        <iframe title="SoundCloud — Daniel Quaranta" style="height:450px" loading="lazy" src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/danielquaranta&amp;color=%238a3b2e&amp;show_comments=false&amp;show_reposts=false&amp;visual=false"></iframe>
-        <div class="links">
-          <a href="https://soundcloud.com/danielquaranta">soundcloud.com/danielquaranta ↗</a>
-          <a href="https://soundcloud.com/daniel-quaranta">soundcloud.com/daniel-quaranta ↗</a>
-          <a href="https://danielquaranta.bandcamp.com/releases">Bandcamp ↗</a>
-        </div>
-      </div>
-    </article>
-
-    <h3 class="sub">Catálogo selecionado</h3>
-    <p class="note" style="margin-top:-6px">Ano da estreia ou da primeira apresentação registrada.</p>
+    <p class="note" style="margin-top:-16px">Seleção. Ano da estreia ou da primeira apresentação registrada.</p>
     <ul class="catalog">
       <li><span class="y">2026</span><span><span class="t">Vice-Versa</span></span><span class="d">Cervantes Electroacústico, Teatro Cervantes, Buenos Aires</span></li>
       <li><span class="y">2025</span><span><span class="t">Más al Sur</span> <span class="f">· piano</span></span><span class="d">FIMME, Palacio de Bellas Artes, Cidade do México · Eufonias, Belo Horizonte (Ana Cláudia Assis)</span></li>
+      <li><span class="y">2025</span><span><span class="t">Sudestada</span> <span class="f">· eletroacústica</span></span><span class="d">Coletânea da Sociedade Brasileira de Música Eletroacústica (SBME), vol. 1</span><a class="listen" href="https://sbme2.bandcamp.com/album/nova-colet-nea-sbme-vol-01">▶ Ouvir no Bandcamp</a></li>
       <li><span class="y">2022</span><span><span class="t">Anfibio</span> <span class="f">· orquestra de cordas</span></span><span class="d">Encomenda da Orquestra Sinfônica Brasileira · Teatro Riachuelo, Rio de Janeiro</span></li>
+      <li><span class="y">2021</span><span><span class="t">Galicia — Essay on Bells</span> <span class="f">· eletroacústica</span></span><span class="d">Gravações em campanários de cidades galegas · Estreia no FIME, Teatro Cervantes, Buenos Aires (2024) · Visiones Sonoras, Morelia (2024)</span><a class="listen" href="https://danielquaranta.bandcamp.com/album/galicia-daniel-quaranta">▶ Ouvir no Bandcamp</a></li>
+      <li><span class="y">2020</span><span><span class="t">Frenética</span> <span class="f">· flauta e eletroacústica</span></span><span class="d">Patricia García, álbum Nan Yar (2025) · FIME, Buenos Aires (2023)</span><a class="listen" href="https://open.spotify.com/album/0qq5M2BF8wS81zVoG4XLjB">▶ Ouvir no Spotify</a></li>
       <li><span class="y">2019</span><span><span class="t">Helena e seu ventríloquo</span> <span class="f">· ópera eletroacústica em 7 atos, soprano e sistema multicanal</span></span><span class="d">Com Doriana Mendes · Ex-Teresa, Cidade do México · Visiones Sonoras, Morelia · Festival Zeppelin, Barcelona · Prêmio Ibermúsicas 2019</span></li>
+      <li><span class="y">2017</span><span><span class="t">Depois do Desejo</span> <span class="f">· voz e eletrônica, 8 canais</span></span><span class="d">Doriana Mendes · Fundación Telefónica, Lima</span><a class="listen" href="https://danielquaranta.bandcamp.com/track/depois-do-desejo">▶ Ouvir no Bandcamp</a></li>
       <li><span class="y">2017</span><span><span class="t">Residual I</span> <span class="f">· eletroacústica</span></span><span class="d">Visiones Sonoras, Morelia · Concordia University, Montreal · EMS 2019, Cidade do México</span></li>
       <li><span class="y">2017</span><span><span class="t">Estudio Verde</span> <span class="f">· eletroacústica</span></span><span class="d">Monaco Électroacoustique · Festival de Música de La Habana, Casa de las Américas (2018)</span></li>
       <li><span class="y">2017</span><span><span class="t">Equilibrio Desequilibrio</span> <span class="f">· duo de percussão</span></span><span class="d">Grupo Ritmus, Sala Belgrano, Buenos Aires</span></li>
@@ -210,6 +184,10 @@
       <li><span class="y">2001</span><span><span class="t">La Hora Mágica</span> <span class="f">· saxofone e eletrônica</span></span><span class="d">Theatro Municipal do Rio de Janeiro · Primavera en La Habana · Visiones Sonoras (2010) · partitura: Periferia Sheet Music</span></li>
       <li><span class="y">2001</span><span><span class="t">Água-forte nº I</span> <span class="f">· acusmática</span></span><span class="d">XIV Bienal de Música Brasileira Contemporânea, Sala Cecília Meireles</span></li>
     </ul>
+    <p class="links" style="margin-top:24px">
+      <a href="https://soundcloud.com/danielquaranta">Mais gravações no SoundCloud ↗</a>
+      <a href="https://danielquaranta.bandcamp.com">Bandcamp ↗</a>
+    </p>
   </section>
 
   <!-- ===================== ESCRITOS ===================== -->
@@ -217,11 +195,13 @@
     <h2>Escritos</h2>
 
     <h3 class="sub" style="margin-top:0">Livros</h3>
-    <ul class="refs">
-      <li>QUARANTA, Daniel; DAVID, Pedro Leal; SANTOS, Rodolfo Pereira dos <i>et al.</i> <strong>Seminários Dispersos em Criação Musical</strong>: volume I – primeiras conversas. Rio de Janeiro: Mauad, 2025. ISBN 978-65-5377-183-3.</li>
-      <li>CARNEIRO, Marcelo; QUARANTA, Daniel (org.). <strong>Perspectivas actuales en la creación y el análisis de la música electroacústica</strong>. Buenos Aires: Editorial UNQ, 2021. (Colección Música y Ciencia). ISBN 978-987-558-732-8.</li>
+    <div class="books">
+      <figure><img loading="lazy" src="img/livro-seminarios.jpg" alt="Capa do livro Seminários Dispersos em Criação Musical, volume I"><figcaption>QUARANTA, Daniel; DAVID, Pedro Leal; SANTOS, Rodolfo. <strong>Seminários Dispersos em Criação Musical</strong>: volume I – primeiras conversas. Rio de Janeiro: Mauad; FAPERJ, 2025. ISBN 978-65-5377-183-3.<span class="bnote">Livro que surge do Grupo de Pesquisa Práticas Sonoras de Borda (CNPq), selecionado pelo edital de Editoração 2024 da FAPERJ.</span></figcaption></figure>
+      <figure><img loading="lazy" src="img/livro-perspectivas.jpg" alt="Capa do livro Perspectivas actuales en la creación y el análisis de la música electroacústica"><figcaption>QUARANTA, Daniel Eduardo; LIMA, Marcelo Carneiro de (comp.). <strong>Perspectivas actuales en la creación y el análisis de la música electroacústica</strong>. Bernal: Universidad Nacional de Quilmes Editorial, 2021. ISBN 978-987-558-732-8.</figcaption></figure>
+      <figure><img loading="lazy" src="img/livro-dez-olhares.jpg" alt="Capa do livro 10 Olhares da Música de Hoje"><figcaption>QUARANTA, Daniel; FENERICH, Alexandre S. (org.). <strong>10 olhares da música de hoje</strong>: seleção de artigos apresentados no EIMAS de 2010 a 2013. Juiz de Fora: UFJF; FAPEMIG, 2015.</figcaption></figure>
+    </div>
+    <ul class="refs" style="margin-top:24px">
       <li>QUARANTA, Daniel (coord.). <strong>Creación musical, investigación y producción académica</strong>: desafíos para la música en la universidad. Morelia: CMMAS, 2017.</li>
-      <li>QUARANTA, Daniel; FENERICH, Alexandre (org.). <strong>Dez olhares sobre a música de hoje</strong>. Juiz de Fora: Garcia Edizioni, 2015.</li>
     </ul>
 
     <h3 class="sub">Capítulos e artigos</h3>
@@ -325,26 +305,6 @@
       <a href="img/g14.jpg"><img loading="lazy" src="img/g14.jpg" alt="Retrato em preto e branco, granulado"></a>
     </div>
     <p class="note" style="margin-top:16px">Fotos: [créditos a completar].</p>
-  </section>
-
-  <!-- ===================== SOBRE ===================== -->
-  <section id="sobre">
-    <h2>Sobre</h2>
-    <div class="two">
-      <div>
-        <p>Daniel Quaranta é compositor e atua no campo da música contemporânea, tanto eletroacústica quanto instrumental. Nasceu em Buenos Aires e vive no Brasil desde 1995. É bacharel em Composição e doutor em Música pela UNIRIO, e mestre em Música pela UFRJ.</p>
-        <p>Recebeu o Prêmio Reina Sofía (Espanha) em 2004 e 2009 e foi contemplado pelo programa Ibermúsicas em 2017 e 2019. Em 2015, recebeu uma encomenda em comemoração aos 450 anos do Rio de Janeiro. Suas obras foram publicadas por editoras da Alemanha, do Brasil e do México.</p>
-        <p>Realizou residências artísticas no CMMAS, México (2012, 2014, 2015), nos Dias de Música Eletroacústica, Portugal, no ICST da Zurich University of the Arts (2018) e nos Estúdios Métamorphoses d’Orphée, Bélgica (2019).</p>
-      </div>
-      <div>
-        <p>É professor titular do Departamento de Composição e Regência da UNIRIO e coordenador do Programa de Pós-Graduação em Música. Fez pós-doutorado no Centro Mexicano para la Música y las Artes Sonoras (2014–2015) e foi professor visitante na UNAM (2023).</p>
-        <p>Entre 2009 e 2013 criou e coordenou o Encontro Internacional de Música e Artes Sonoras (EIMAS), na UFJF. É Pesquisador do Nosso Estado (FAPERJ) e bolsista de Produtividade em Pesquisa do CNPq.</p>
-        <p class="links">
-          <a href="https://lattes.cnpq.br/4362742581917920">Currículo Lattes ↗</a>
-          <a href="https://orcid.org/0000-0003-0187-2911">ORCID ↗</a>
-        </p>
-      </div>
-    </div>
   </section>
 
   <!-- ===================== CONTATO ===================== -->
