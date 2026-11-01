@@ -60,6 +60,17 @@
   .catalog .listen{grid-column:2;justify-self:start;margin-right:8px;margin-top:6px;font-size:13px;text-decoration:none;border:1px solid var(--line);padding:3px 10px;border-radius:999px}
   .catalog .listen:hover{border-color:var(--accent)}
 
+  .obras-wrap{display:grid;grid-template-columns:1fr 200px;gap:40px;align-items:start}
+  .obras-wrap .catalog{grid-column:1;grid-row:1}
+  .side{grid-column:2;grid-row:1;display:flex;flex-direction:column;gap:12px;position:sticky;top:84px}
+  .side a{display:block}
+  .side img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+  @media (max-width:760px){
+    .obras-wrap{grid-template-columns:1fr;gap:20px}
+    .side{grid-column:1;grid-row:1;position:static;flex-direction:row;overflow-x:auto;gap:8px}
+    .side a{flex:0 0 46%}
+    .obras-wrap .catalog{grid-row:2}
+  }
   .refs{list-style:none;padding:0;margin:0}
   .books{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
   .books figure{margin:0}
@@ -160,6 +171,14 @@
   <section id="obras">
     <h2>Obras</h2>
     <p class="note" style="margin-top:-16px">Seleção. Ano da estreia ou da primeira apresentação registrada.</p>
+    <div class="obras-wrap">
+    <aside class="side">
+      <a href="img/o1.jpg"><img loading="lazy" src="img/o1.jpg" alt="Difusão sonora ao vivo, na mesa de som, com luz violeta"></a>
+      <a href="img/o2.jpg"><img loading="lazy" src="img/o2.jpg" alt="Performance com eletrônica, toca-discos e teclado, em salão com colunas"></a>
+      <a href="img/o3.jpg"><img loading="lazy" src="img/o3.jpg" alt="Piano preparado aberto, com talheres e parafusos entre as cordas"></a>
+      <a href="img/o4.jpg"><img loading="lazy" src="img/o4.jpg" alt="Instrumentos e circuitos eletrônicos artesanais sobre mesa vermelha"></a>
+      <a href="img/o5.jpg"><img loading="lazy" src="img/o5.jpg" alt="Mãos manipulando um dispositivo eletrônico durante uma performance"></a>
+    </aside>
     <ul class="catalog">
       <li><span class="y">2026</span><span><span class="t">Vice-Versa</span></span><span class="d">Cervantes Electroacústico, Teatro Cervantes, Buenos Aires</span></li>
       <li><span class="y">2025</span><span><span class="t">Más al Sur</span> <span class="f">· piano</span></span><span class="d">FIMME, Palacio de Bellas Artes, Cidade do México · Eufonias, Belo Horizonte (Ana Cláudia Assis)</span></li>
@@ -190,6 +209,7 @@
       <li><span class="y">2001</span><span><span class="t">La Hora Mágica</span> <span class="f">· saxofone e eletrônica</span></span><span class="d">Theatro Municipal do Rio de Janeiro · Primavera en La Habana · Visiones Sonoras (2010) · partitura: Periferia Sheet Music</span></li>
       <li><span class="y">2001</span><span><span class="t">Água-forte nº I</span> <span class="f">· acusmática</span></span><span class="d">XIV Bienal de Música Brasileira Contemporânea, Sala Cecília Meireles</span></li>
     </ul>
+    </div>
     <p class="links" style="margin-top:24px">
       <a href="https://soundcloud.com/danielquaranta">Mais gravações no SoundCloud ↗</a>
       <a href="https://danielquaranta.bandcamp.com">Bandcamp ↗</a>
@@ -333,7 +353,7 @@
 <div class="lb" id="lb"><img alt=""></div>
 <script>
   const lb=document.getElementById('lb'), li=lb.querySelector('img');
-  document.querySelectorAll('.gallery a').forEach(a=>a.addEventListener('click',e=>{
+  document.querySelectorAll('.gallery a, .side a').forEach(a=>a.addEventListener('click',e=>{
     e.preventDefault(); li.src=a.href; li.alt=a.querySelector('img').alt; lb.classList.add('on');
   }));
   lb.addEventListener('click',()=>lb.classList.remove('on'));
