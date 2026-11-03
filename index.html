@@ -35,6 +35,7 @@
   .hero figure{margin:0}
   .hero img{width:100%;height:auto;display:block;aspect-ratio:5/4;object-fit:cover}
   .bio{margin-top:40px;scroll-margin-top:80px}
+  .bio p:not(.links){text-align:justify;hyphens:auto;-webkit-hyphens:auto}
   .hero p.lead{font:400 21px/1.55 var(--serif);max-width:680px;margin:40px 0 0}
 
   section{padding:64px 0;border-top:1px solid var(--line)}
@@ -102,6 +103,8 @@
   .gallery{columns:3 260px;column-gap:12px}
   .gallery a{display:block;margin:0 0 12px;break-inside:avoid}
   .gallery img{width:100%;height:auto;display:block}
+  .gallery a.cap{text-decoration:none}
+  .gallery a.cap span{display:block;font-size:13px;color:var(--muted);margin-top:6px}
   .gallery.row3{columns:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
   .gallery.row3 a{margin:0}
   .gallery.row3 img{aspect-ratio:4/3;object-fit:cover;height:100%}
@@ -327,6 +330,7 @@
     </div>
     <h3 class="sub">Concertos, estúdio e processo</h3>
     <div class="gallery">
+      <a href="img/g15.jpg" class="cap"><img loading="lazy" src="img/g15.jpg" alt="Aula magna de Daniel Quaranta na Universidade de Castelo Branco, Portugal"><span>Aula magna · Universidade de Castelo Branco, Portugal</span></a>
       <a href="img/g12.jpg"><img loading="lazy" src="img/g12.jpg" alt="Daniel Quaranta em apresentação, diante do computador"></a>
       <a href="img/g13.jpg"><img loading="lazy" src="img/g13.jpg" alt="Na mesa de som, em movimento"></a>
       <a href="img/g07.jpg"><img loading="lazy" src="img/g07.jpg" alt="Performance eletroacústica, mesa de som e projeção"></a>
